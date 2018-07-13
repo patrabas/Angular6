@@ -1,0 +1,49 @@
+<h1>Ejemplo de formulario model driven (reactive)</h1>
+<form [formGroup]="formFactura" (ngSubmit)="crearFactura()">
+  <div>
+    <label for="cliente">Cliente</label>
+    <input type="text" id="cliente" formControlName="cliente">
+  </div>
+  <div>
+    <label for="cif">CIF
+      <span class="novalido" *ngIf="formFactura.get('cif').hasError('checkCIF') && formFactura.get('cif').value.length>0">
+        El CIF debe comenzar por letra
+      </span>
+      <span class="novalido" *ngIf="formFactura.get('cif').hasError('required') && formFactura.get('cif').value.length===0">
+        El campo es obligatorio
+      </span>
+    </label>
+    <input type="text" id="cif" formControlName="cif">
+  </div>
+  <div>
+    <label for="fecha">Fecha</label>
+    <input type="date" id="fecha" formControlName="fecha">
+  </div>
+  <div>
+    <label for="base">Base imponible</label>
+    <input type="number" id="base" formControlName="base">
+  </div>
+  <div formGroupName="datosIVA">
+    <div>
+      <label for="tipo">Porcentaje de IVA</label>
+      <select id="tipo" formControlName="tipo">
+        <option value=0>0%</option>
+        <option value=0.04>4%</option>
+        <option value="0.1">10%</option>
+        <option value="0.21">21%</option>
+      </select>
+    </div>
+    <div>
+      <label for="iva">Importe IVA</label>
+      <input type="number" id="iva" formControlName="iva">
+    </div>
+  </div>
+  <div>
+    <label for="total">Total factura IVA incluido</label>
+    <input type="number" id="total" formControlName="total">
+  </div>
+  <div>
+    <button type="submit">Añadir factura</button>
+  </div>
+</form>
+<pre>{{formFactura.value | json}}</pre>

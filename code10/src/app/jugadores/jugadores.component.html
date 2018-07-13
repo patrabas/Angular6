@@ -1,0 +1,21 @@
+<div class="contenedor">
+  <table>
+    <tr *ngFor="let jugador of jugadores">
+      <td>{{jugador.nombre}}</td> 
+      <td>
+        <button (click)="setCanasta(1, this.jugador.nombre)">Libre</button>
+        <button (click)="setCanasta(2, this.jugador.nombre)">Doble</button>
+        <button (click)="setCanasta(3, this.jugador.nombre)">Triple</button>
+      </td>
+    </tr>
+  </table>
+  <table>
+      <tr *ngFor="let jugador of topJugadores">
+        <td>
+          <img [src]="jugador.imagen">
+          {{jugador.nombre}}
+        </td> 
+        <td>{{jugador.puntos}}</td>
+      </tr>
+    </table>
+</div>

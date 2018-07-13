@@ -1,0 +1,7 @@
+<h1>Bienvenida {{clientesService.username}}</h1>
+<h1>Listado de clientes</h1>
+<ul>
+  <li *ngFor="let cliente of clientes">
+    {{cliente.nombre}} - {{cliente.cif}}
+  </li>
+</ul>

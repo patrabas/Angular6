@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+.glosario{
+    color: crimson;
+    cursor: help;
+    position: relative;
+}
+.definicion{
+    display: none;
+    border: 2px solid orange;
+    background-color:white;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+.definicion.activa{
+    display: inline;
+}

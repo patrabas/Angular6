@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+table {
+    width: 100%;
+    margin: 40px;
+}
+tr:nth-child(odd) td{
+    background-color: lightseagreen;
+    font-size: 20px;
+    padding:10px;
+}
+tr:nth-child(even) td{
+    background-color: rgb(173, 241, 238);
+    font-size: 20px;
+    padding:10px;
+}

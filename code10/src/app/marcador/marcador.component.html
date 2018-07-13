@@ -1,0 +1,9 @@
+<div class="marcador">
+  <img src="assets/NBA_Logo.svg">
+  <img src="assets/Los_Angeles_Lakers_logo.svg">
+  <span>{{puntosEquipo}}</span>
+</div>
+<app-jugadores
+  [jugadores]="jugadores"
+  (canasta)="getCanasta($event)"
+></app-jugadores>

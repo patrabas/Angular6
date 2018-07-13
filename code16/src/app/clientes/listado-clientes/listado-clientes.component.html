@@ -1,0 +1,17 @@
+<div class="contenedor" appCargaSuave>
+  <h1>{{titulo}}</h1>
+</div>
+<table>
+  <tr>
+    <td>Nombre</td>
+    <td>CIF</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr *ngFor="let cliente of clientes">
+    <td>{{cliente.nombre}}</td>
+    <td>{{cliente.cif}}</td>
+    <td><a routerLink="/detalle-clientes/{{cliente.id}}">Visualizar</a></td>
+    <td><a>Eliminar</a></td>
+  </tr>
+</table>

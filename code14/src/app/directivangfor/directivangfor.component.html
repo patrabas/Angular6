@@ -1,0 +1,13 @@
+<h1>Ejemplo de directiva ngFor</h1>
+<table>
+  <tr>
+    <td>Nº</td>
+    <td>Nombre</td>
+    <td>CIF</td>
+  </tr>
+  <tr *ngFor="let cliente of clientes; let i = index">
+    <td>{{i+1}}</td>
+    <td>{{cliente.nombre}}</td>
+    <td>{{cliente.cif}}</td>
+  </tr>
+</table>

@@ -1,0 +1,11 @@
+<h1>Ejemplo de directiva ngClass</h1>
+<input type="number" placeholder="Introduzca su puntuación" [(ngModel)]="puntuacion">
+<div *ngIf="puntuacion">
+<h3 *ngIf="puntuacion >=0 && puntuacion <=10; else aviso" 
+  [ngClass]="{aprobado: puntuacion>=5, suspenso:puntuacion<5}">
+    La puntuacion obtenida es: {{puntuacion}}
+</h3>
+<ng-template #aviso>
+  <p>Por favor, introduzca un valor entre 0 y 10</p>
+</ng-template>
+</div>
